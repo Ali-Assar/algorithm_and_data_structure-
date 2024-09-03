@@ -136,9 +136,3 @@ Both implementations follow the same logic and structure, allowing you to compar
 
 Stacks and queues are essential data structures widely used in algorithms, such as depth-first search (DFS) for stacks and breadth-first search (BFS) for queues. Stacks are ideal when you need to reverse the order of elements (LIFO), while queues are perfect for processing elements in the order they arrive (FIFO). Understanding their operations and complexities helps in choosing the right data structure for the right problem. Both data structures offer constant-time operations for adding and removing elements, making them highly efficient for their intended use cases.
 ```
-
-### Summary of Additions
-- **Explanation for Stack**: Clarified why elements are added and removed from the top (LIFO principle).
-- **Explanation for Queue**: Clarified why elements are added to the end and removed from the front (FIFO principle).
-
-This ensures that anyone reading the `README.md` will understand not just how to use stacks and queues, but also why they are structured and operated upon in this specific manner.
