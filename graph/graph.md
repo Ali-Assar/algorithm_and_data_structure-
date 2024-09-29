@@ -86,8 +86,3 @@ This shows that each vertex points to a list of its connected neighbors.
 
 Adjacency lists are more space-efficient for sparse graphs, which makes them a better choice in most cases. Adjacency matrices, on the other hand, can be useful for dense graphs where the number of edges is close to the square of the number of vertices.
 
----
-
-### Conversion to Go
-
-Here’s the Go implementation of the same adjacency list graph:

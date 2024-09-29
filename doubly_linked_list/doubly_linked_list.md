@@ -150,4 +150,3 @@ Both implementations follow the same logic and structure, allowing you to compar
 ## Conclusion
 
 Understanding the operations and their complexities is crucial for leveraging doubly linked lists effectively. Doubly linked lists offer dynamic memory allocation and efficient insertion and deletion at both ends of the list. They provide additional flexibility over singly linked lists by allowing traversal in both directions, though at the cost of increased memory usage due to the additional pointer for the previous node.
-```

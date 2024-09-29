@@ -1,101 +1,88 @@
+from collections import deque
+
 class Node:
-    def __init__(self,value) :
-        self.value =  value
+    def __init__(self, value):
+        self.value = value
         self.left = None
         self.right = None
-
 
 class BinarySearchTree:
     def __init__(self):
         self.root = None
 
-    def insert(self,value):
+    def insert(self, value):
         new_node = Node(value)
         if self.root is None:
             self.root = new_node
             return True
-        else:
-            temp = self.root
-            while (True):
-                if new_node.value == temp.value:
-                    return False
-                if new_node.value < temp.value:
-                    if temp.left is None:
-                        temp.left = new_node
-                        return True
-                    temp = temp.left
-                else:
-                    if temp.right is None:
-                        temp.right = new_node
-                        return True
-                    temp = temp.right
+        temp = self.root
+        while True:
+            if new_node.value == temp.value:
+                return False
+            if new_node.value < temp.value:
+                if temp.left is None:
+                    temp.left = new_node
+                    return True
+                temp = temp.left
+            else:
+                if temp.right is None:
+                    temp.right = new_node
+                    return True
+                temp = temp.right
 
     def BFS(self):
-        current_node = self.root
-        queue = []
         results = []
-        queue.append(current_node )
+        if self.root is None:
+            return results
+        queue = deque([self.root])
 
-        while len (queue) > 0:
-            current_node = queue.pop(0)
+        while queue:
+            current_node = queue.popleft()
             results.append(current_node.value)
-            if current_node.left is not None:
+            if current_node.left:
                 queue.append(current_node.left)
-            if current_node.right is not None:
+            if current_node.right:
                 queue.append(current_node.right)
         return results
     
-    def dfs_pre_order (self):
+    def dfs_pre_order(self):
         results = []
-        def traverse (current_node):
-            results.append(current_node.value)
-            if current_node.left is not None:
-                traverse(current_node.left)
-            if current_node.right is not None:
-                traverse(current_node.right)
+        def traverse(node):
+            results.append(node.value)
+            if node.left:
+                traverse(node.left)
+            if node.right:
+                traverse(node.right)
         traverse(self.root)
         return results
-    
+
     def dfs_post_order(self):
-        results = []    
-        def traverse (current_node):
-            
-            if current_node.left is not None:
-                traverse(current_node.left)
-            if current_node.right is not None:
-                traverse(current_node.right)
-            results.append(current_node.value)
+        results = []
+        def traverse(node):
+            if node.left:
+                traverse(node.left)
+            if node.right:
+                traverse(node.right)
+            results.append(node.value)
         traverse(self.root)
         return results
-    
+
     def dfs_in_order(self):
-        results = []    
-        def traverse (current_node):
-            
-            if current_node.left is not None:
-                traverse(current_node.left)
-            results.append(current_node.value)
-            if current_node.right is not None:
-                traverse(current_node.right)
-           
+        results = []
+        def traverse(node):
+            if node.left:
+                traverse(node.left)
+            results.append(node.value)
+            if node.right:
+                traverse(node.right)
         traverse(self.root)
         return results
 
 tree = BinarySearchTree()
-tree.insert(28)
-tree.insert(45)
-tree.insert(98)
-tree.insert(11)
-tree.insert(21)
-tree.insert(86)
-tree.insert(21)
+for value in [28, 45, 98, 11, 21, 86, 21]:
+    tree.insert(value)
 
-print("BFS result:", tree.BFS())
-
-
-
-print("dfs pre order result:",tree.dfs_pre_order())
-
-print("dfs post order result:",tree.dfs_post_order())
-
-print("dfs in order result:",tree.dfs_in_order())
+print("BFS:", tree.BFS())
+print("DFS Pre-order:", tree.dfs_pre_order())
+print("DFS Post-order:", tree.dfs_post_order())
+print("DFS In-order:", tree.dfs_in_order())

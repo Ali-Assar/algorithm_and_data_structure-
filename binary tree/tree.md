@@ -1,6 +1,6 @@
 # Binary Search Tree (BST) Implementation in Go and Python
 
-This repository contains implementations of a Binary Search Tree (BST) in both Go and Python. A BST is a widely used data structure that allows for efficient search, insertion, and deletion operations.
+This Folder of repository contains implementations of a Binary Search Tree (BST) in both Go and Python. A BST is a widely used data structure that allows for efficient search, insertion, and deletion operations.
 
 ## What is a Binary Search Tree (BST)?
 
@@ -47,20 +47,6 @@ This property allows for efficient searching, as you can eliminate half of the t
 
 **Complexity**: O(log n) on average, but O(n) in the worst case.
 
-## Code Availability
-
-This repository provides the Binary Search Tree implementation in both Go and Python. The directory structure is as follows:
-
-```
-/go/
-    bst.go   // Go implementation of Binary Search Tree
-/python/
-    bst.py   // Python implementation of Binary Search Tree
-```
-
-Both implementations follow the same logic and structure, allowing you to compare and contrast how BSTs are implemented in these two languages.
-
 ## Conclusion
 
 Binary Search Trees are a fundamental data structure in computer science, enabling efficient search, insertion, and deletion operations. By maintaining a sorted structure, BSTs allow you to quickly locate elements and maintain ordered data dynamically. Understanding how BSTs work and their associated complexities is essential for optimizing search-related tasks in various applications.
-```
