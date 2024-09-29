@@ -37,28 +37,6 @@ A stack is a linear data structure that follows the Last In, First Out (LIFO) pr
 
 **Complexity**: O(1)
 
-### Example Usage
-
-```python
-my_stack = Stack(4)
-my_stack.push(6)
-my_stack.push(8)
-my_stack.print_stack()
-
-print(my_stack.pop())
-my_stack.print_stack()
-```
-
-```go
-myStack := NewStack(4)
-myStack.Push(6)
-myStack.Push(8)
-myStack.PrintStack()
-
-fmt.Println("Popped:", myStack.Pop().value)
-myStack.PrintStack()
-```
-
 ## What is a Queue?
 
 A queue is a linear data structure that follows the First In, First Out (FIFO) principle. This means that the first element added to the queue will be the first one to be removed. Think of a queue like a line of people waiting to buy tickets: the first person in line is the first one to get their ticket and leave the line.
@@ -94,43 +72,6 @@ A queue is a linear data structure that follows the First In, First Out (FIFO) p
 - If the queue is empty after the operation, set `last` to `nil`.
 
 **Complexity**: O(1)
-
-### Example Usage
-
-```python
-my_queue = Queue(4)
-my_queue.enqueue(5)
-my_queue.enqueue(8)
-my_queue.print_queue()
-
-print(my_queue.dequeue())
-my_queue.print_queue()
-```
-
-```go
-myQueue := NewQueue(4)
-myQueue.Enqueue(5)
-myQueue.Enqueue(8)
-myQueue.PrintQueue()
-
-fmt.Println("Dequeued:", myQueue.Dequeue().value)
-myQueue.PrintQueue()
-```
-
-## Code Availability
-
-This repository provides the Stack and Queue implementations in both Go and Python. The directory structure is as follows:
-
-```
-/go/
-    stack.go   // Go implementation of Stack
-    queue/queue.go   // Go implementation of Queue
-/python/
-    stack.py   // Python implementation of Stack
-   queue/queue.py   // Python implementation of Queue
-```
-
-Both implementations follow the same logic and structure, allowing you to compare and contrast how stacks and queues are implemented in these two languages.
 
 ## Conclusion
 
