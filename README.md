@@ -15,7 +15,6 @@ Welcome to the **Algorithms and Data Structures** repository! This collection fe
 9. [Recursion](./recursion/recursion.md)
    - [Recursive Binary Search Tree](./recursion/recursiveBST/recursive_bst.md)
 10. [Stack and Queue](./stack%20and%20queue/stack_and_queue.md)
-    - [Queue](./stack%20and%20queue/queue/queue.md)
 11. [Tree Traversal](./tree-traversal/tree_traversal.md)
 
 ## Features
